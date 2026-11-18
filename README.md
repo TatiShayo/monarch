@@ -26,17 +26,17 @@ Built for Samsung Tizen 4.0 TVs (tested on `UE65NU7100`), Monarch replaces Samsu
 
 | Home Spotlight & Shelves | 4K Player OSD & Skip Intro |
 | :---: | :---: |
-| ![Home Spotlight](docs/screenshots/home_spotlight.png) | ![Player OSD](docs/screenshots/player_osd.png) |
+| ![Home Spotlight](docs/screenshots/home_spotlight.jpg) | ![Player OSD](docs/screenshots/player_osd.jpg) |
 | *Spotlight Hero, Continue Watching, Movies, TV Shows, Anime & Top Nav* | *AVPlay 4K playback with Skip Intro (`+85s`), Subtitles & Next Episode* |
 
 | In-Player Episode Carousel | Customize & Theme Drawer |
 | :---: | :---: |
-| ![Episode Carousel](docs/screenshots/episode_carousel.png) | ![Customize Drawer](docs/screenshots/customize_drawer.png) |
+| ![Episode Carousel](docs/screenshots/episode_carousel.jpg) | ![Customize Drawer](docs/screenshots/customize_drawer.jpg) |
 | *Browse and jump episodes without leaving playback* | *Layout presets, accent colors, backdrop dimness & idle screensaver* |
 
 | 16:9 Art Gallery Screensaver | Monarch Phone / PC Web Remote |
 | :---: | :---: |
-| ![Art Gallery](docs/screenshots/art_gallery.png) | ![Monarch Remote](docs/screenshots/monarch_remote.png) |
+| ![Art Gallery](docs/screenshots/art_gallery.jpg) | ![Monarch Remote](docs/screenshots/monarch_remote.png) |
 | *Curated 16:9 Art Gallery & idle screensaver mode* | *Zero-dependency LAN WebSocket remote & 1-tap TV App Launcher* |
 
 ---
@@ -85,7 +85,7 @@ flowchart LR
 ## Quick Start
 
 ### 1. Sideload the TV App (`app/`)
-1. Enable **Developer Mode** on your Samsung TV (**Apps** → press `1 2 3 4 5` → **ON** → enter your PC's LAN IP → cold reboot TV). See [`app/TV_CHECKLIST.md`](app/TV_CHECKLIST.md) for the full diagnostic & safety walkthrough.
+1. Enable **Developer Mode** on your Samsung TV (**Apps** -> press `1 2 3 4 5` -> **ON** -> enter your PC's LAN IP -> cold reboot TV). See [`app/TV_CHECKLIST.md`](app/TV_CHECKLIST.md) for the full diagnostic & safety walkthrough.
 2. Package and install with [`tests/pack_wgt.py`](tests/pack_wgt.py) and `apps2samsung-cli` (or Tizen Studio):
    ```powershell
    python tests/pack_wgt.py

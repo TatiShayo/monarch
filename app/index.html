@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Monarch</title>
+  <meta name="viewport" content="width=1920, height=1080">
+  <link rel="stylesheet" href="style.css">
+  <script src="$WEBAPIS/webapis/webapis.js"></script>
+</head>
+<body class="lay-0 acc-0 dim-0">
+  <object id="av-player" type="application/avplayer"></object>
+
+  <div id="app">
+    <div id="bg">
+      <div id="bg-tint"></div>
+      <div id="bg-img"></div>
+      <div id="bg-shade"></div>
+      <div id="bg-vig"></div>
+    </div>
+
+    <div id="home" class="screen">
+      <div id="hdr">
+        <div id="hdr-brand">
+          <div id="logo"><svg viewBox="45 520 910 470" aria-hidden="true"><path class="lp" d="M687.1,557.5c0,0,54.6,62.9,13.3,110.9c-41.4,48-112.6,33.1-129.2,13.2c-16.6-19.9-19.9-149-19.9-149l-33.1,61.3h-36.4l-33.1-61.3c0,0-3.3,129.1-19.9,149c-16.6,19.9-87.8,34.8-129.2-13.2c-41.4-48,13.2-110.9,13.2-110.9S59.6,620.4,59.6,764.4c0,144.1,175.5,190.4,175.5,190.4c-24.8-16.6-49.7-86.1,6.6-104.3c56.3-18.2,106,41.4,106,41.4s3.1-33.9,54.6-36.4C470.2,852.2,500,973.1,500,973.1s29.8-120.9,97.7-117.6c51.5,2.5,54.6,36.4,54.6,36.4s49.7-59.6,106-41.4c56.3,18.2,31.5,87.8,6.6,104.3c0,0,175.5-46.4,175.5-190.4C940.5,620.4,687.1,557.5,687.1,557.5z"/></svg></div>
+          <div id="hdr-title">Monarch</div>
+          <div id="hdr-drive" class="hidden"></div>
+        </div>
+        <div id="hdr-nav"></div>
+        <div id="hdr-actions">
+          <div id="hdr-clock"></div>
+        </div>
+      </div>
+
+      <div id="hero">
+        <div id="hero-k"></div>
+        <div id="hero-t"></div>
+        <div id="hero-s"></div>
+        <div id="hero-p" class="hidden"></div>
+        <div id="hero-plot"></div>
+        <div id="hero-cta"></div>
+      </div>
+
+      <div id="shelves-clip">
+        <div id="shelves"></div>
+      </div>
+    </div>
+
+    <div id="browse" class="screen hidden">
+      <div id="crumb"></div>
+      <div id="tabs" class="hidden"></div>
+      <div id="list"></div>
+      <div id="info">
+        <div id="poster">
+          <div id="poster-ph"><span class="ph-ico"></span><span id="poster-ph-t"></span></div>
+        </div>
+        <div id="i-title"></div>
+        <div id="i-sub"></div>
+        <div id="i-pills" class="hidden"></div>
+        <div id="i-plot"></div>
+      </div>
+    </div>
+
+    <div id="detail" class="screen hidden">
+      <div id="d-poster">
+        <div id="d-ph"><span class="ph-ico"></span><span id="d-ph-t"></span></div>
+      </div>
+      <div id="d-main">
+        <div id="d-k"></div>
+        <div id="d-title"></div>
+        <div id="d-sub"></div>
+        <div id="d-pills" class="hidden"></div>
+        <div id="d-plot"></div>
+        <div id="d-btns"></div>
+      </div>
+    </div>
+
+    <div id="customize" class="hidden">
+      <div id="cust-head">
+        <div id="cust-title">Customize</div>
+        <div id="cust-sub">Appearance, idle art &amp; shortcuts</div>
+      </div>
+      <div id="cust-list"></div>
+      <div id="cust-foot">Left / Right: change &nbsp;&middot;&nbsp; OK: select<br>Blue key: Art Gallery &nbsp;&middot;&nbsp; Back: close</div>
+    </div>
+
+    <div id="gallery" class="hidden">
+      <div id="gal-img-a" class="gal-layer"></div>
+      <div id="gal-img-b" class="gal-layer"></div>
+      <div id="gal-img"></div>
+      <div id="gal-shade"></div>
+      <div id="gal-clock"></div>
+      <div id="gal-meta">
+        <div id="gal-k">Now Showing</div>
+        <div id="gal-title"></div>
+        <div id="gal-sub"></div>
+        <div id="gal-hint">Left / Right: painting &nbsp;&middot;&nbsp; Up / Down: Fit / Fill &nbsp;&middot;&nbsp; OK: Pause &nbsp;&middot;&nbsp; Back: exit</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="player" class="hidden">
+    <div id="subs"><span></span></div>
+
+    <div id="play-splash" class="hidden">
+      <div id="ps-bg"></div>
+      <div id="ps-shade"></div>
+      <div id="ps-card">
+        <div class="spin ps-spin"></div>
+        <div id="ps-k">Switching to</div>
+        <div id="ps-t"></div>
+        <div id="ps-s"></div>
+        <div id="ps-hint">Press Back to cancel</div>
+      </div>
+    </div>
+
+    <div id="seek-flash" class="hidden"></div>
+
+    <div id="skip-intro" class="hidden">
+      <span class="sk-lbl">Skip Intro</span>
+    </div>
+
+    <div id="osd" class="hidden">
+      <div id="osd-top">
+        <div id="osd-top-l">
+          <div id="osd-title"></div>
+          <div id="osd-sub"></div>
+        </div>
+        <div id="osd-clock"></div>
+      </div>
+      <div id="osd-bot">
+        <div id="osd-row">
+          <div id="osd-left"></div>
+          <div id="osd-right"></div>
+        </div>
+        <div id="osd-scrub">
+          <div id="osd-bub">0:00</div>
+          <div id="osd-bar">
+            <div id="osd-fill"></div>
+            <div id="osd-knob"></div>
+          </div>
+          <div id="osd-time">
+            <div id="osd-cur"></div>
+            <div id="osd-dur"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom-aligned 2-column Audio & Subtitles modal -->
+    <div id="as-modal" class="hidden">
+      <div id="as-head">Audio &amp; Subtitles</div>
+      <div id="as-cols">
+        <div class="as-col">
+          <div class="as-col-t">Audio</div>
+          <div id="as-aud-list"></div>
+        </div>
+        <div class="as-col as-col-r">
+          <div class="as-col-t">Subtitles</div>
+          <div id="as-sub-list"></div>
+        </div>
+      </div>
+      <div id="as-foot">Left / Right: switch column &nbsp;&middot;&nbsp; OK: select &nbsp;&middot;&nbsp; Back: close</div>
+    </div>
+
+    <!-- 2026 Bottom Horizontal Episode Carousel -->
+    <div id="ep-drawer" class="hidden">
+      <div id="ep-head">
+        <div id="ep-title">Episodes</div>
+        <div id="ep-sub"></div>
+        <div id="ep-desc"></div>
+      </div>
+      <div id="ep-clip">
+        <div id="ep-track"></div>
+      </div>
+      <div id="ep-foot">Left / Right: choose episode &nbsp;&middot;&nbsp; OK: play &nbsp;&middot;&nbsp; Back: close</div>
+    </div>
+
+    <!-- Hidden Gear Player Settings drawer -->
+    <div id="picker" class="hidden">
+      <div id="pk-title"></div>
+      <div id="pk-list"></div>
+      <div id="pk-hint"></div>
+    </div>
+
+    <div id="upnext" class="hidden">
+      <div id="un-1">Next Episode</div>
+      <div id="un-2"></div>
+      <div id="un-3">OK: Play Next &nbsp;&middot;&nbsp; Back: Watch Credits</div>
+    </div>
+    <div id="buffering" class="hidden">Buffering...</div>
+  </div>
+
+  <div id="busy" class="hidden">
+    <div class="bx">
+      <div class="spin"></div>
+      <div id="busy-t">Loading...</div>
+    </div>
+  </div>
+  <div id="toast" class="hidden"></div>
+  <div id="diag" class="hidden"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
